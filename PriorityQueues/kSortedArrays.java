@@ -1,4 +1,4 @@
-package Heaps;
+package PriorityQueues;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,22 +10,22 @@ public class kSortedArrays {
 		int k = 3;
 		// starting with minHeap
 		PriorityQueue<Integer> p = new PriorityQueue<>();
-		List<Integer>ans = new ArrayList<>();
-		
-		for(int ele: arr) {
+		List<Integer> ans = new ArrayList<>();
+
+		// this algorithm will take O(nlogk)
+
+		for (int ele : arr) {
 			p.add(ele);
-			if(p.size()>k) {
+			if (p.size() > k) {
 				ans.add(p.remove());
 			}
 		}
-		while(!p.isEmpty()) {
+		while (!p.isEmpty()) {
 			ans.add(p.remove());
 		}
-	
-		
-		
-		for(int ele : ans) {
-			System.out.print(ele+" ");
+
+		for (int ele : ans) {
+			System.out.print(ele + " ");
 		}
 
 	}
