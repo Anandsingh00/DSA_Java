@@ -73,36 +73,43 @@ public class IsBTaMaxHeapOrNot {
 }
 
 class MedianFinder {
-	PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder()); // maxHeap
-	PriorityQueue<Integer> rs = new PriorityQueue<>();
-
-	public MedianFinder() {
-
-	}
-
-	public void addNum(int num) {
-		pq.add(num);
-	}
-
-	public double findMedian() {
-//		Collections.sort(arr); //do  not use built-in sort 
-		
-		// if the heap is odd in size
-		if (pq.size() % 2 != 0) {
-			while(pq.size()-1!=rs.size()) {
-				rs.add(pq.remove());
-			}
-			double median = pq.remove();
-			return median;
-		}
-		else {
-			while(pq.size()!=rs.size()) {
-				rs.add(pq.remove());
-			}
-			double x = pq.remove();
-			double y = pq.remove();
-			return (x+y)/2;
-		}
-
-	}
+	PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+	PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+	
+    public MedianFinder() {
+        
+    }
+    
+    public void addNum(int num) {
+        if(maxHeap.size() ==0) {
+        	maxHeap.add(num);
+        }
+        if(num<maxHeap.size()) {
+        	maxHeap.add(num);
+        }else {
+        	minHeap.add(num);
+        }
+        
+        
+        //balance the heaps
+        if(maxHeap.size() == minHeap.size()+2) {
+        	int top = maxHeap.remove();
+        	minHeap.add(top);
+        }
+        if(minHeap.size() == maxHeap.size()+2) {
+        	int top = minHeap.remove();
+        	maxHeap.add(top);
+        }
+        
+    }
+    
+    public double findMedian() {
+        if(maxHeap.size()==minHeap.size()) {
+        	return (maxHeap.peek()+minHeap.peek())/2.0;
+        }
+        else if(maxHeap.size()>minHeap.size()) {
+        	return maxHeap.peek();
+        }else   return  minHeap.peek();
+        
+    }
 }
