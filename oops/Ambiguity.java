@@ -9,7 +9,7 @@ class Calculator{
 	
 }
 
-public class Amiguitiy {
+public class Ambiguity {
 public static void main(String[]args) {
 	Calculator c = new Calculator();
 	c.add('a');//char--> char,int
