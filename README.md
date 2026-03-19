@@ -1,186 +1,97 @@
-\# 📚 DSA in Java
+# 🚀 DSA in Java
 
+![Java](https://img.shields.io/badge/Language-Java-blue)
+![Repo Size](https://img.shields.io/github/repo-size/Anandsingh00/DSA_Java)
+![Last Commit](https://img.shields.io/github/last-commit/Anandsingh00/DSA_Java)
 
+---
 
-This repository contains my implementations of \*\*Data Structures and Algorithms (DSA)\*\* in Java.
+## 📌 About
 
-I am consistently practicing problems to strengthen my problem-solving skills and prepare for technical interviews.
+This repository contains my implementations of **Data Structures and Algorithms (DSA)** in Java.
 
+I am consistently practicing problems to:
 
+* Improve problem-solving skills
+* Build strong DSA foundations
+* Prepare for technical interviews
 
-\---
+---
 
+## 🧠 Topics Covered
 
+### 📂 Arrays
 
-\## 🚀 Topics Covered
+* Array manipulation
+* Searching & sorting
+* Rotation, merging
 
+### 📂 Strings
 
+* Pattern matching (Naive, Rabin-Karp)
+* String manipulation
+* Interview-based problems
 
-\### 📌 Arrays
+### 📂 Graphs
 
+* Number of Provinces
+* BFS / DFS traversal
 
+### 📂 Stack
 
-\* Array manipulation
+* Stack operations
+* Recursive stack problems
+* Reverse stack using recursion
 
-\* Searching \& sorting problems
+---
 
-\* Rotation, merging, etc.
+## 🛠️ Tech Stack
 
+* **Language:** Java
+* **IDE:** IntelliJ IDEA
+* **Version Control:** Git & GitHub
 
+---
 
-\### 📌 Strings
-
-
-
-\* Pattern matching (Naive, Rabin-Karp)
-
-\* String manipulation
-
-\* Common interview problems
-
-
-
-\### 📌 Graphs
-
-
-
-\* Number of Provinces (BFS/DFS)
-
-\* Graph traversal techniques
-
-
-
-\### 📌 Stack
-
-
-
-\* Stack operations
-
-\* Recursive stack problems
-
-\* Reversing stack using recursion
-
-
-
-\---
-
-
-
-\## 🛠️ Tech Stack
-
-
-
-\* Language: \*\*Java\*\*
-
-\* IDE: IntelliJ IDEA
-
-\* Version Control: Git \& GitHub
-
-
-
-\---
-
-
-
-\## 📂 Project Structure
-
-
+## 📁 Project Structure
 
 ```
-
-DSA\_Java/
-
-│
-
+DSA_Java/
 ├── Arrays/
-
 ├── Graphs/
-
 ├── Strings/
-
 ├── Stack/
-
 └── README.md
-
 ```
 
+---
 
+## 🎯 Goals
 
-\---
+* 📌 Practice DSA daily
+* 📌 Strengthen coding logic
+* 📌 Crack technical interviews
+* 📌 Maintain clean & structured code
 
+---
 
+## 📈 Progress
 
-\## 🎯 Goal
+* ✅ Core topics covered
+* 🔄 Regular updates in progress
+* 🚀 More problems coming soon
 
+---
 
+## ⚠️ Note
 
-\* Solve DSA problems consistently
+* Code is written for **clarity and understanding**
+* Optimized solutions will be added gradually
 
-\* Build strong problem-solving intuition
+---
 
-\* Prepare for coding interviews
+## ⭐ Support
 
-\* Maintain a structured and clean codebase
+If you find this repository helpful, consider giving it a ⭐!
 
-
-
-\---
-
-
-
-\## 📈 Progress
-
-
-
-\* ✔ Practicing daily problems
-
-\* ✔ Covering core DSA topics
-
-\* 🔄 Continuously updating repository
-
-
-
-\---
-
-
-
-\## 💡 Notes
-
-
-
-\* All programs are written in a simple and readable format
-
-\* Focus is on clarity + logic
-
-\* More optimizations and advanced problems will be added over time
-
-
-
-\---
-
-
-
-\## 🤝 Contributions
-
-
-
-This is a personal learning repository, but suggestions and improvements are always welcome!
-
-
-
-\---
-
-
-
-\## ⭐ If you find this useful
-
-
-
-Give it a ⭐ and follow my journey!
-
-
-
-\---
-
-
-
+---
