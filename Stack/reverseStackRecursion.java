@@ -18,6 +18,25 @@ public class reverseStackRecursion {
             st.push(pt.pop());
         }
     }
+
+    public static void pushAtBottom(Stack<Integer> st, int ele){
+        if(st.isEmpty()){
+            st.push(ele);
+            return ;
+        }
+        int top = st.pop();
+        pushAtBottom(st,ele);
+        st.push(top);
+    }
+    public static void reverseStack(Stack<Integer> st){
+        if(st.isEmpty()){
+            return ;
+        }
+        int top = st.pop();
+        reverseStack(st);
+        pushAtBottom(st,top);
+    }
+
     public static void main(String[] args) {
         Stack<Integer> st = new Stack<>();
 
@@ -29,7 +48,7 @@ public class reverseStackRecursion {
 
         System.out.print("Input Stack: "+st);
         System.out.println();
-        reverseStack1(st);
+        reverseStack(st);
         System.out.print("Output Stack: "+st);
     }
 }
