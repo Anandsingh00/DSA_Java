@@ -1,0 +1,10 @@
+# IntelliJ files
+.idea/
+*.iml
+
+# Compiled output
+out/
+*.class
+
+# Optional (if you don’t want module system)
+module-info.java
