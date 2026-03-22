@@ -7,7 +7,8 @@ public class KeysAndRooms {
         int n = adj.size();
         boolean [] vis = new boolean[n];
         vis[0] = true;
-        bfs(0,adj,vis);
+//        bfs(0,adj,vis);
+        dfs(0,adj,vis);
 
         for(boolean ele : vis){
             if(!ele) return false;
@@ -15,6 +16,15 @@ public class KeysAndRooms {
          return true;
     }
 
+
+    private static void dfs(int start,List<List<Integer>>adj ,boolean [] vis){
+        vis[start] = true;
+        for(int ele: adj.get(start)){
+            if(!vis[ele]){
+                dfs(ele,adj,vis);
+            }
+        }
+    }
     private static void bfs(int start,List<List<Integer>>adj ,boolean [] vis){
         Queue<Integer> q = new LinkedList<>();
         q.add(start);

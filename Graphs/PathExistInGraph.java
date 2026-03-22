@@ -22,13 +22,24 @@ public class PathExistInGraph {
             adj.get(b).add(a);
         }
         vis[source] = true;
-        bfs(source,adj,vis);
+//        bfs(source,adj,vis);
+        dfs(source,adj,vis);
 
         if(!vis[end]){
             return false;
         }
         return true;
     }
+
+    public static void dfs(int start , List<List<Integer>> adj , boolean [] vis){
+        vis[start] = true;
+
+        for(int ele: adj.get(start)){
+            if(!vis[ele])
+                dfs(ele,adj,vis);
+        }
+    }
+
     private void bfs(int start , List<List<Integer>> adj, boolean [] vis){
         Queue<Integer> q = new LinkedList<>();
         q.add(start);

@@ -13,7 +13,8 @@ public class NoOfIslands {
         for(int i = 0 ; i < m ; i++){
             for(int j = 0 ; j < n ;j++){
                 if(grid[i][j] == '1' && !vis[i][j] ){
-                    bfs(i,j,grid,vis);
+//                    bfs(i,j,grid,vis);
+                    dfs(i,j,grid,vis);
                     vis[i][j]= true;
                     count++;
                 }
@@ -32,6 +33,21 @@ public class NoOfIslands {
             this.row = row;
             this.col = col;
         }
+    }
+
+    public static void dfs(int row , int col , char[][] grid , boolean vis[][]){
+        int m = grid.length;
+        int n = grid[0].length;
+        vis[row][col] = true;
+
+        if(row-1 >= 0 && vis[row-1][col] == false && grid[row-1][col] == '1')
+            dfs(row-1,col,grid,vis);
+        if(row+1 <= m-1 && vis[row+1][col] == false && grid[row+1][col] == '1')
+            dfs(row+1,col,grid,vis);
+        if(col-1 >= 0 && vis[row][col-1] == false && grid[row][col-1] == '1')
+            dfs(row,col-1,grid,vis);
+        if(col+1 <= n-1 && vis[row][col+1] == false && grid[row][col+1] == '1')
+            dfs(row,col+1,grid,vis);
     }
 
     public static  void bfs(int i , int j , char[][] grid,boolean [][] vis){

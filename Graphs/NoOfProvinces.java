@@ -27,11 +27,23 @@ public class NoOfProvinces {
         int count = 0;
         for(int i = 0; i < n ; i++){
             if(!vis[i]){
-                bfs(i,adj,vis);
+//                bfs(i,adj,vis);
+                dfs(i,adj,vis);
+
                 count++;
             }
         }
         return count ;
+    }
+
+    private static void  dfs(int i , int[][] adj, boolean []vis){
+        int n = adj.length;
+        vis[i] = true;
+        for(int j = 0 ; j < n ; j++){
+            if(vis[j] == false  && adj[i][j] == 1){
+                dfs(j,adj,vis);
+            }
+        }
     }
     public static void main(String[] args) {
         int[][] adj = {
